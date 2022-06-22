@@ -121,6 +121,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #a4d8d8;
 }
 
+.accord__header_yellow {
+  background-color: #fff0ac;
+}
+
+.accord__header_yellow:hover {
+  background-color: #e9e0ba;
+}
+
 .accord__title {
   font-size: 25px;
   text-align: center;
@@ -137,6 +145,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.accord__info_yellow {
+  background-color: #fffce0;
+}
+
 .accord__text {
   padding: 10px 20px;
   line-height: 1.4;
@@ -144,6 +156,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .accordion__item._active .accord__header {
   background-color: #a4d8d8;
+}
+
+.accordion__item._active .accord__header_yellow {
+  background-color: #e9e0ba;
 }
 
 .accordion__item._active .accord__info {
