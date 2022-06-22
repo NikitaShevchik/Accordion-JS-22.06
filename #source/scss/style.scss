@@ -1,5 +1,82 @@
 // Обнуление стилей
 @import "nullstyle.scss";
 // Подключение шрифтов
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); 
 //SCSS
+.main {
+    font-family: 'Rubik', sans-serif;
+}
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.accordion {
+		&__items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+		}
+		&__item {
+		}
+}
+.accord {
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+		&__header {
+            position: relative;
+            background-color: rgb(172, 255, 255);
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease 0s;
+            border: 1px solid black;
+            &:hover{
+                background-color: rgb(164, 216, 216);
+            }
+		}
+		&__title {
+            font-size: 25px;
+            text-align: center;
+            line-height: 50px;
+		}
+		&__info {
+            display: block;
+            background-color: rgb(224, 255, 255);
+            position: relative;
+            max-height: 0;
+            transition: all 0.5s 0s ease;
+            // transform: translate(0, -100%);
+            z-index: 1;
+		}
+        &__text {
+            padding: 10px 20px;
+            line-height: 1.4;
+		}
+}
+
+
+.accordion__item._active{
+    .accord__header{
+        background-color: rgb(164, 216, 216);
+    }
+    .accord__info{
+        max-height: 150px;
+        transition: all 0.5s 0s ease;
+    }
+}
+
+.accord__header::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100px;
+    height: 10px;
+    background-color: red;
+}
